@@ -60,10 +60,9 @@ module Pastejour
   end
 
   def self.serve(name, multiple, contents)
-    tr = DNSSD::TextRecord.new
-    tr['description'] = File.read("#{path}/.git/description") rescue "a git project"
+    description = File.read("#{path}/.git/description") rescue "a git project"
     
-    DNSSD.register(name, SERVICE, "local", PORT, tr.encode) do |reply|
+    DNSSD.register(name, SERVICE, "local", PORT, {"description"=>description}) do |reply|
       puts "Pasting #{name}..."
     end
 
