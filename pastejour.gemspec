@@ -20,5 +20,5 @@ Gem::Specification.new do |s|
   s.rubygems_version = %q{1.1.1}
   s.summary = %q{Broadcast standard out.}
 
-  s.add_dependency(%q<dnssd>, [">= 0.6.0"])
+  s.add_dependency(%q<net-mdns>, [">= 0.6.0"])
 end

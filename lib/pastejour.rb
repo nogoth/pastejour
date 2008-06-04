@@ -1,8 +1,11 @@
-require "dnssd"
+require 'net/dns/mdns-sd'
 require "socket"
 require "webrick"
 require "set"
 require "pastejour/version"
+
+  DNSSD = Net::DNS::MDNSSD
+
 
 Thread.abort_on_exception = true
 

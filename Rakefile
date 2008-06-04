@@ -22,7 +22,7 @@ pastejour_gemspec = Gem::Specification.new do |s|
   s.files            = %w(README.rdoc Rakefile) + Dir.glob("{bin,lib,spec}/**/*")
   s.executables      = %w(pastejour)
   
-  s.add_dependency "dnssd", ">= 0.6.0"
+  s.add_dependency "net-mdns", ">= 0.4.0"
 end
 
 Rake::GemPackageTask.new(pastejour_gemspec) do |pkg|
